@@ -1,5 +1,5 @@
-use std::io::prelude::*;
 use flate2::read::GzDecoder;
+use std::io::prelude::*;
 
 pub fn decompress() {
     let mut d = GzDecoder::new("...".as_bytes());

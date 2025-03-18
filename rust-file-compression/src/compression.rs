@@ -1,6 +1,6 @@
-use std::io::prelude::*;
 use flate2::Compression;
 use flate2::write::ZlibEncoder;
+use std::io::prelude::*;
 
 pub fn compress() {
     let mut e = ZlibEncoder::new(Vec::new(), Compression::default());
