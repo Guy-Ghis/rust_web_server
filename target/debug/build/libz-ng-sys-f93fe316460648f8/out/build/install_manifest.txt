@@ -1,0 +1,9 @@
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/lib/libz-ng.a
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/include/zlib-ng.h
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/include/zlib_name_mangling-ng.h
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/include/zconf-ng.h
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/lib/pkgconfig/zlib-ng.pc
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/lib/cmake/zlib-ng/zlib-ng.cmake
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/lib/cmake/zlib-ng/zlib-ng-debug.cmake
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/lib/cmake/zlib-ng/zlib-ng-config.cmake
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/lib/cmake/zlib-ng/zlib-ng-config-version.cmake

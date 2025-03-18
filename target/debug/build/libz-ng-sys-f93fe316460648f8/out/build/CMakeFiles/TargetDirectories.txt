@@ -1,0 +1,9 @@
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/zlib.dir
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/package.dir
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/package_source.dir
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/edit_cache.dir
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/rebuild_cache.dir
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/list_install_components.dir
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/install.dir
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/install/local.dir
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/install/strip.dir

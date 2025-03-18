@@ -1,0 +1,34 @@
+Determining if the include file arm_acle.h exists failed with the following output:
+Change Dir: /home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_96840/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_96840.dir/build.make CMakeFiles/cmTC_96840.dir/build
+gmake[1]: Entering directory '/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_96840.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_96840.dir/CheckIncludeFile.c.o -c /home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: arm_acle.h: No such file or directory
+    1 | #include <arm_acle.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_96840.dir/build.make:78: CMakeFiles/cmTC_96840.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_96840/fast] Error 2
+
+
+
+Determining if the include file sys/sdt.h exists failed with the following output:
+Change Dir: /home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_36947/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_36947.dir/build.make CMakeFiles/cmTC_36947.dir/build
+gmake[1]: Entering directory '/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_36947.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_36947.dir/CheckIncludeFile.c.o -c /home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: sys/sdt.h: No such file or directory
+    1 | #include <sys/sdt.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_36947.dir/build.make:78: CMakeFiles/cmTC_36947.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/build/libz-ng-sys-f93fe316460648f8/out/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_36947/fast] Error 2
+
+
+

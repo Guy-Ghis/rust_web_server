@@ -1,0 +1,8 @@
+[package]
+name = "rust-file-upload-endpoint"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = { version = "0.7.3", features = ["multipart"] }
+tokio ={ version = "1.0", features = ["full"]}
