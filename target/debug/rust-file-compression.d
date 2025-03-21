@@ -1,0 +1,1 @@
+/home/guy_ghis/projects/rust_projects/rust_web_server/target/debug/rust-file-compression: /home/guy_ghis/projects/rust_projects/rust_web_server/rust-file-compression/src/compression.rs /home/guy_ghis/projects/rust_projects/rust_web_server/rust-file-compression/src/main.rs

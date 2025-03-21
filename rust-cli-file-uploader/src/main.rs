@@ -1,32 +1,15 @@
-mod upload_file;
-use clap::Arg;
-use clap::Command;
-use upload_file::upload_file;
-fn main() {
-    let matches = Command::new("Rust CLI File Uploader")
-        .version("1.0")
-        .author("Guy-Ghis <guyghis@gmail.com>")
-        .about("Uploads files to a specified endpoint")
-        .arg(
-            Arg::new("file")
-                .help("The path to the file upload")
-                .required(true)
-                .index(1),
-        )
-        .arg(
-            Arg::new("url")
-                .help("The upload endpoint URL")
-                .required(true)
-                .index(2),
-        )
-        .get_matches();
+use std::error::Error;
 
-    let file_path = matches
-        .get_one::<String>("file")
-        .expect("file path not found");
-    let url = matches.get_one::<String>("url").expect("URL not found");
+use cli_upload::CliUploader;
+use structopt::StructOpt;
 
-    if let Err(e) = upload_file(file_path, url) {
-        eprintln!("Error uploading file: {}", e);
-    }
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn Error>> {
+    let cli = CliUploader::from_args();
+
+    cli.upload_file().await?;
+
+    Ok(())
 }
+
+mod cli_upload;

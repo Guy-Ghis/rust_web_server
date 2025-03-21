@@ -1,7 +1,11 @@
 mod compression;
-mod decompression;
+use std::error::Error;
 
-fn main() {
-    compression::compress();
-    decompression::decompress();
+use compression::CompressFile;
+fn main() -> Result<(), Box<dyn Error>> {
+    let file = CompressFile::new("file.txt");
+
+    file.compress()?;
+
+    Ok(())
 }
