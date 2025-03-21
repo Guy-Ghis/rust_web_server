@@ -14,7 +14,7 @@ impl<'a> CompressFile<'a> {
     }
 
     pub fn compress(&self) -> Result<File, Box<dyn Error>> {
-        let mut input_file = File::open(&self.file)?;
+        let mut input_file = File::open(self.file)?;
         let mut buffer = Vec::new();
 
         input_file.read_to_end(&mut buffer)?;
