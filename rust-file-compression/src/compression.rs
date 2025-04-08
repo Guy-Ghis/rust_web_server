@@ -1,32 +1,50 @@
+extern crate flate2;
+
 use flate2::Compression;
-use flate2::write::GzEncoder;
-use std::fs::File;
-use std::io::{BufReader, BufWriter, Read, Write};
+use flate2::write::ZlibEncoder;
+use std::fs::{File, create_dir_all};
+use std::io::{self, Read, Write};
+use std::path::{Path, PathBuf};
 
-/// Compresses a file using Gzip compression and writes it to the output file
-pub fn compress_file(input_path: &str, output_path: &str, method: &str) -> std::io::Result<()> {
-    // Open the input file
-    let input_file = File::open(input_path)?;
-    let mut reader = BufReader::new(input_file);
+pub fn compress_file(input: &str, level: u32) -> Result<String, io::Error> {
+    let input_path = Path::new(input);
 
-    // Create the output file
-    let output_file = File::create(output_path)?;
-    let writer = BufWriter::new(output_file);
+    // Read the entire input file into a vector of bytes
+    let mut input_data = Vec::new();
+    File::open(input_path)?.read_to_end(&mut input_data)?;
 
-    // Create a GzEncoder to compress the data
-    let mut encoder = match method {
-        "best" => GzEncoder::new(writer, Compression::best()),
-        "fast" => GzEncoder::new(writer, Compression::fast()),
-        "default" => GzEncoder::new(writer, Compression::default()),
+    // Compress the input data
+    let mut encoder = ZlibEncoder::new(Vec::new(), Compression::new(level));
+    encoder.write_all(&input_data)?;
+    let compressed_data = encoder.finish()?; // Get the compressed data
 
-        _ => GzEncoder::new(writer, Compression::best()),
-    };
+    // Create the "../compressed_files" directory if it doesn't exist
+    let compressed_dir = Path::new("../compressed_files");
+    if !compressed_dir.exists() {
+        create_dir_all(compressed_dir)?; // Create the directory and any intermediate directories if needed
+    }
 
-    // Read data from the input file and write compressed data to output
-    let mut buffer = Vec::new();
-    reader.read_to_end(&mut buffer)?;
-    encoder.write_all(&buffer)?;
-    encoder.finish()?;
+    // Change the extension of the file to .gz (replace original extension)
+    let output_file_name = input_path
+        .file_stem()
+        .unwrap()
+        .to_str()
+        .unwrap()
+        .to_string()
+        + ".gz";
 
-    Ok(())
+    let output_path: PathBuf = compressed_dir.join(&output_file_name);
+
+    // Write the compressed data to the output file
+    let mut output = File::create(&output_path)?;
+    output.write_all(&compressed_data)?;
+
+    // Log the file compression success with full output path
+    println!(
+        "File compressed successfully. Output saved as: {:?}",
+        output_path
+    );
+
+    // Return only the file name with the new .gz extension
+    Ok(output_file_name)
 }
