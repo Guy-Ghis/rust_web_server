@@ -1,5 +1,7 @@
 # rust_web_server
 
+---
+## Overview
 Welcome to rust-web-server, a robust and efficient web server built with Rust that facilitates file uploads, automatic compression, and saves the files to a database. This server is designed to handle file management seamlessly, ensuring high performance and reliability. Whether you are working on an application that requires file handling or simply want to implement a secure and fast file server, this project has you covered.
 
 ---
